@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myShopingList">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="container">
+        <header>
+            <h2>MY ShopingList</h2>
+        </header>
+        <div  ng-controller="firstCtrl">
+            <section>
+
+            <ul>
+                <li ng-repeat="_data in products">{{_data}}<span ng-click="removeItem($index)"> x</span> </li>        
+            </ul>
+      
+    
+
+            <input ng-model="bindData" placeholder="Add Shopinglist item here">
+            <button ng-click="addItems()">Add</button>
+        </section>
+        </div>
+        
+         
+
+    </div>
+</div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
